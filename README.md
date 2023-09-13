@@ -1,34 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Plintech Challenge 13092023
 
-First, run the development server:
+
+
+
+
+## Stack utilizada
+
+
+
+**Front-end:** NextJS, Tailwind css 
+
+
+
+
+
+## Instalação
+
+
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+  npm run dev
+  
+```
+    
+## Documentação da API
+
+
+
+```http
+  GET /cep
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Parâmetro   |     Descrição                           |
+| :---------- |   :---------------------------------- |
+| `Nenhum` | `Retorna a rota para busca de endereços` |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+```http
+  GET /
+```
 
-To learn more about Next.js, take a look at the following resources:
+| Parâmetro   |     Descrição                           |
+| :---------- |   :---------------------------------- |
+| `Nenhum` | `Retorna a página de Clima` |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```http
+  GET /form
+```
 
-## Deploy on Vercel
+| Parâmetro   |     Descrição                           |
+| :---------- |   :---------------------------------- |
+| `Nenhum` | `Retorna a página de Formulario` |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Demonstração
+
+
+https://www.loom.com/share/bc46799d10c94204901b801ef80380d2
+
+
+
+
