@@ -41,7 +41,7 @@ const WeatherApp = () => {
 
     useEffect(() => {
         if (typeof window !== 'undefined' && typeof window.navigator !== 'undefined' && 'geolocation' in window.navigator) {
-            const apiKey = 'e4c2690e6fd638ecec894ecfc786c14a';
+            const apiKey =  process.env.NEXT_PUBLIC_GEO_KEY
             navigator.geolocation.getCurrentPosition(function (position) {
                 const lat = position.coords.latitude;
                 const lon = position.coords.longitude;
