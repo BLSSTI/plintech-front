@@ -1,7 +1,6 @@
 export const searchLocationByStreetName = async (streetName:string) => {
     const apiKey = process.env.NEXT_PUBLIC_MAPS_KEY
 
-    console.log(apiKey)
     try {
       const apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(streetName)}&key=${apiKey}`;
       const response = await fetch(apiUrl);

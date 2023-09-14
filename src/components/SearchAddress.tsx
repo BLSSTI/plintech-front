@@ -12,7 +12,6 @@ const SearchAddress = () => {
   const [searchResults, setSearchResults] = React.useState<AddressResult[]>([]);
 
   const onSubmit = async (data: IFormInput) => {
-    console.log(data);
     try {
       const res = await searchLocationByStreetName(data.Endereco);
       setSearchResults(res);

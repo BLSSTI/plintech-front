@@ -14,8 +14,6 @@ interface IFormInput {
 export const ContactForm = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<IFormInput>();
 
-
-
   const onSubmit = async (data: IFormInput) => {
     console.log(data);
     try {

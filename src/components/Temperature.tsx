@@ -32,9 +32,9 @@ const WeatherApp = () => {
 
     const formatLabel = (label: string, value: string) => {
         return (
-            <div className='flex items-center font-serif'>
-                <span className='text-lg font-serif text-end font-semibold'>{label}:</span>
-                <span className='text-xl font-serif text-end font-semibold ml-2'>{value}</span>
+            <div className='flex items-center font-serif text-black'>
+                <span className='text-lg font-serif text-end font-semibold text-black'>{label}:</span>
+                <span className='text-xl font-serif text-end font-semibold ml-2 text-black'>{value}</span>
             </div>
         );
     };
@@ -64,9 +64,9 @@ const WeatherApp = () => {
     return (
         <div>
             {loaded && (
-                <div className='bg-gray-100 m-8 rounded p-6 md:w-2/3 xl:w-1/2 mx-auto'>
+                <div className='bg-gray-100 m-8 rounded p-6 md:w-2/3 xl:w-1/2 mx-auto text-red'>
                     <div className='flex items-center justify-center'>
-                        <h1 className='text-3xl md:text-4xl font-semibold antialiased font-serif text-center mb-4'>Clima em {weatherData?.name}</h1>
+                        <h1 className='text-3xl md:text-4xl font-semibold antialiased font-serif text-center mb-4 text-black'>Clima em {weatherData?.name}</h1>
                     </div>
                     <div className='mr-4 inline-flex font-semibold text-3xl bg-gray-300 rounded p-2'>
                         <img src={`https://openweathermap.org/img/wn/${weatherData?.weather[0].icon}@2x.png`} width={80} alt='Icon'></img>
@@ -88,7 +88,7 @@ const WeatherApp = () => {
                             </div>
                         </div>
                         <div className='md:ml-auto flex flex-col mt-4 md:mt-0'>
-                            <p className='font-serif font-semibold text-2xl text-center md:text-end leading-1'>Clima</p>
+                            <p className='font-serif font-semibold text-2xl text-center md:text-end leading-1 text-black'>Clima</p>
                             <p className='text-xl font-serif text-center md:text-end font-semibold text-gray-500'>{weatherData?.weather[0].description}</p>
                             <p className='text-xl font-semibold font-serif text-center md:text-end text-gray-500'>{getCurrentDateTime()}</p>
                         </div>
