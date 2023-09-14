@@ -1,15 +1,13 @@
-import {searchLocationByStreetName} from '@/pages/api/searchLocation';
+import { searchLocationByStreetName } from '@/pages/api/searchLocation';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import {AddressTable} from './AddressTable/AddressTable';
+import { AddressTable } from './AddressTable/AddressTable';
 import AddressResult from './AddressTable/interface';
-
+interface IFormInput {
+  Endereco: string;
+}
 const SearchAddress = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<IFormInput>();
-
-  interface IFormInput {
-    Endereco: string;
-  }
 
   const [searchResults, setSearchResults] = React.useState<AddressResult[]>([]);
 

@@ -1,7 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
-import { RxCross1 } from "react-icons/rx";
 import Link from "next/link";
 
 const Navbar = () => {

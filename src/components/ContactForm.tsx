@@ -2,18 +2,19 @@ import {searchLocationByStreetName} from '@/pages/api/searchLocation';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
+interface PdfFile {
+  type: string;
+}
+interface IFormInput {
+  Email: string
+  Cidade: string;
+  Nome: string;
+  pdf: PdfFile[];
+}
 export const ContactForm = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<IFormInput>();
 
-  interface PdfFile {
-    type: string;
-  }
-  interface IFormInput {
-    Email: string
-    Cidade: string;
-    Nome: string;
-    pdf: PdfFile[];
-  }
+
 
   const onSubmit = async (data: IFormInput) => {
     console.log(data);

@@ -40,7 +40,7 @@ const WeatherApp = () => {
     };
 
     useEffect(() => {
-        if (typeof window !== 'undefined' && typeof window.navigator !== 'undefined' && 'geolocation' in window.navigator) {
+        if ('geolocation' in window.navigator) {
             const apiKey =  process.env.NEXT_PUBLIC_GEO_KEY
             navigator.geolocation.getCurrentPosition(function (position) {
                 const lat = position.coords.latitude;
@@ -64,11 +64,11 @@ const WeatherApp = () => {
     return (
         <div>
             {loaded && (
-                <div className='bg-slate-100 m-8 rounded p-6 md:w-2/3 xl:w-1/2 mx-auto'>
+                <div className='bg-gray-100 m-8 rounded p-6 md:w-2/3 xl:w-1/2 mx-auto'>
                     <div className='flex items-center justify-center'>
                         <h1 className='text-3xl md:text-4xl font-semibold antialiased font-serif text-center mb-4'>Clima em {weatherData?.name}</h1>
                     </div>
-                    <div className='mr-4 inline-flex font-semibold text-3xl'>
+                    <div className='mr-4 inline-flex font-semibold text-3xl bg-gray-300 rounded p-2'>
                         <img src={`https://openweathermap.org/img/wn/${weatherData?.weather[0].icon}@2x.png`} width={80} alt='Icon'></img>
                         {weatherData?.main.temp} ºC
                     </div>
